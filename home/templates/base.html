@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="{% static 'front/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'front/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+</head>
+<style>
+    * {
+        font-family: cursive;
+    }
+
+    body {
+        background-image: url(bg1.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg shadow-lg portfolio-navbar gradient"
+        style="filter: brightness(95%) contrast(103%) saturate(104%) sepia(0%);">
+        <div class="container"><a class="navbar-brand logo" data-bs-hover-animate="rubberBand"
+                href="{% url 'home' %">Hello!&nbsp;<span class="typed"></span></a><button data-toggle="collapse"
+                class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" data-bs-hover-animate="rubberBand"
+                            href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" data-bs-hover-animate="rubberBand"
+                            href="{% url 'project' %}">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" data-bs-hover-animate="rubberBand"
+                            href="{% url 'cv' %}">CV</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" data-bs-hover-animate="rubberBand"
+                            href="{% url 'blogs:all_blogs'  %}">My Blogs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a data-bs-hover-animate="swing" href="#">About me</a><a data-bs-hover-animate="swing"
+                    href="#">Contact me</a><a data-bs-hover-animate="swing" href="#">Projects</a></div>
+            <div class="social-icons"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                        class="icon ion-social-instagram-outline"></i></a><a href="#"><i
+                        class="icon ion-social-twitter"></i></a></div>
+        </div>
+    </footer>
+    <script src="{% static 'front/js/jquery.min.js' %}"></script>
+    <script src="{% static 'front/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'front/js/bs-init.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="{% static 'front/js/theme.js' %}"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script>
+    var options = {
+        strings: [
+            'I am Swarup Kharul.',
+            'Nice to meet you.'
+        ],
+        typeSpeed: 100,
+        loop: true,
+        smartBackspace: false,
+        showCursor: true,
+        cursorChar: '_',
+        backSpeed: 40,
+        backDelay: 2000,
+    };
+    var typed = new Typed('.typed', options);
+</script>
+
+
+</html>
