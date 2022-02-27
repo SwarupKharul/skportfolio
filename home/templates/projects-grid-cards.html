@@ -5,19 +5,20 @@
     <section class="portfolio-block projects-cards">
         <div class="container">
             <div class="heading">
-                <h2 data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">Recent Work</h2>
+                <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">Recent Work</h1>
             </div>
             <div class="row">
                 {% for project in projects %}
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-0" data-aos="fade-right" data-aos-duration="300" data-aos-delay="50"><a
-                            href="{{ project.url }}"><img class="card-img-top scale-on-hover"
+                    <div class="card border-0 scale-on-hover m-2" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="50" style="background-color:azure;">
+                        <a href="{{ project.url }}"><img class="card-img-top scale-on-hover"
                                 src="{{ project.image.url }}" alt="Card Image"></a>
                         <div class="card-body">
                             <h6><a href="#">{{project.title}}</a></h6>
                             <p class="text-muted card-text">{{project.description}}</p>
                         </div>
                     </div>
+                    <br>
                 </div>
                 {%endfor%}
             </div>
